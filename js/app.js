@@ -1,6 +1,7 @@
 let count = 0;
 let qrcode
 let id
+let completed = false
 
 $(document).ready(function () {
     qrcode = new QRCode(document.getElementById("qrcode"), '');
@@ -26,9 +27,10 @@ function timeout() {
             id = makeid(25)
             qrcode.makeCode(id); // make another code.
         }
-        if ((count % 3) == 0) {
+        if (((count % 3) == 0) && (!completed)) {
             axios.get('https://whispering-waters-99783.herokuapp.com/qr/' + id,).then(({ data }) => {
                 if (data.status == "success") {
+                    completed = true;
                     qrcode.clear();
                     if (data.type) {
                         let d = 'data:image/' + data.type + ';base64,' + data.content;
