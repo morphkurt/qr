@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <!--script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+            <div class="columns is-mobile is-centered is-vcentered">
+                    <div class="column is-half">
+                        <h1 class="has-text-centered">Scan the code</h1>
+                    </div>
+            </div>
+            <div class="columns is-mobile is-centered is-vcentered">
+                            <figure id="qrcode" class="image  is-256x256">
+                            </figure>
+            </div>
+            <div class="columns is-mobile is-centered is-vcentered">
+                <h1 id="status"></h1>
+            </div>
+    </div>
+  </section>
+  </body>
+</html>
