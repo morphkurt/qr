@@ -19,7 +19,7 @@ $(document).ready(function () {
         if (response.status == "success") {
             qrcode.clear();
             if (response.type == "image") {
-                let d = 'data:image/' + response.type + ';base64,' + response.content;
+                let d = 'data:image/' + response.ext + ';base64,' + response.content;
                 let w = window.open('about:blank');
                 let image = new Image();
                 image.src = d;
