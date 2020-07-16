@@ -2,7 +2,7 @@ let count = 0;
 let qrcode
 let id
 let completed = false
-let ws = new WebSocket("https://qrdrop.herokuapp.com/");
+let ws = new WebSocket("wss://qrdrop.herokuapp.com/");
 
 
 $(document).ready(function () {
